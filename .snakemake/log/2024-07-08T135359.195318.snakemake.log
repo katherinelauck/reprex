@@ -30,3 +30,20 @@ No SLURM account given, trying to guess.
 Guessed SLURM account: adamgrp
 Job 1 has been submitted with SLURM jobid 14333608 (log: /home/kslauck/projects/reprex/.snakemake/slurm_logs/rule_reprex/14333608.log).
 Waiting at most 60 seconds for missing files.
+[Mon Jul  8 13:55:05 2024]
+Finished job 1.
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jul  8 13:55:05 2024]
+localrule all:
+    input: output_file.txt
+    jobid: 0
+    reason: Input files updated by another job: output_file.txt
+    resources: mem_mb=5000, mem_mib=4769, disk_mb=1000, disk_mib=954, tmpdir=/tmp, runtime=20, partition=med2
+
+[Mon Jul  8 13:55:05 2024]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2024-07-08T135359.195318.snakemake.log

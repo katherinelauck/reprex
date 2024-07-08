@@ -1,3 +1,54 @@
 Building DAG of jobs...
 Unlocked working directory.
 
+Using profile . for setting default command line arguments.
+Building DAG of jobs...
+Running Snakemake in a SLURM within a job may lead to unexpected behavior. Please run Snakemake directly on the head node.
+SLURM run ID: 9a696f9f-60fa-43aa-b47e-b89ef6e869a7
+Using shell: /usr/bin/bash
+Provided remote nodes: 500
+Job stats:
+job       count
+------  -------
+all           1
+reprex        1
+total         2
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jul  8 13:54:04 2024]
+rule reprex:
+    input: input_file.txt
+    output: output_file.txt
+    jobid: 1
+    reason: Missing output files: output_file.txt
+    resources: mem_mb=1000, mem_mib=954, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, runtime=5, partition=med2
+
+
+    echo 'Running test rule'
+    sleep 30
+    echo "Partition: $SLURM_JOB_PARTITION" > output_file.txt
+    
+No SLURM account given, trying to guess.
+Guessed SLURM account: adamgrp
+Job 1 has been submitted with SLURM jobid 14333608 (log: /home/kslauck/projects/reprex/.snakemake/slurm_logs/rule_reprex/14333608.log).
+Waiting at most 60 seconds for missing files.
+[Mon Jul  8 13:55:05 2024]
+Finished job 1.
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jul  8 13:55:05 2024]
+localrule all:
+    input: output_file.txt
+    jobid: 0
+    reason: Input files updated by another job: output_file.txt
+    resources: mem_mb=5000, mem_mib=4769, disk_mb=1000, disk_mib=954, tmpdir=/tmp, runtime=20, partition=med2
+
+[Mon Jul  8 13:55:05 2024]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2024-07-08T135359.195318.snakemake.log
+

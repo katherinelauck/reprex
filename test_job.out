@@ -3,3 +3,95 @@ SLURM_JOB_ID = 14333546
 SLURM_NODELIST = cpu-3-50
 ==========================================
 Partition: med2
+SLURM_JOB_USER=kslauck
+SLURM_TASKS_PER_NODE=1
+SLURM_JOB_UID=1662786
+SLURM_TASK_PID=2518564
+SLURM_LOCALID=0
+SLURM_SUBMIT_DIR=/home/kslauck/projects/reprex
+SLURMD_NODENAME=cpu-3-50
+SLURM_JOB_START_TIME=1720472032
+SLURM_NODE_ALIASES=(null)
+SLURM_CLUSTER_NAME=farm
+SLURM_JOB_END_TIME=1720472272
+SLURM_CPUS_ON_NODE=1
+SLURM_JOB_CPUS_PER_NODE=1
+SLURM_GTIDS=0
+SLURM_JOB_PARTITION=med2
+SLURM_JOB_NUM_NODES=1
+SLURM_JOBID=14333546
+SLURM_JOB_QOS=adamgrp-med2-qos
+SLURM_PROCID=0
+SLURM_CPUS_PER_TASK=1
+SLURM_TOPOLOGY_ADDR=cpu-3-50
+SLURM_TOPOLOGY_ADDR_PATTERN=node
+SLURM_SCRIPT_CONTEXT=prolog_task
+SLURM_MEM_PER_NODE=2000
+SLURM_WORKING_CLUSTER=farm:monitoring-ib:6817:9984:109
+SLURM_ROOT=/share/apps/22.04/slurm/23.02.7
+SLURM_NODELIST=cpu-3-50
+SLURM_JOB_ACCOUNT=adamgrp
+SLURM_PRIO_PROCESS=0
+SLURM_NNODES=1
+SLURM_SUBMIT_HOST=cpu-3-64
+SLURM_JOB_ID=14333546
+SLURM_NODEID=0
+SLURM_CONF=/share/apps/22.04/slurm/23.02.7/etc/slurm.conf
+SLURM_JOB_NAME=reprex.sh
+SLURM_JOB_GID=1662786
+SLURM_JOB_NODELIST=cpu-3-50
+JobId=14333546 JobName=reprex.sh
+   UserId=kslauck(1662786) GroupId=kslauck(1662786) MCS_label=N/A
+   Priority=2781 Nice=0 Account=adamgrp QOS=adamgrp-med2-qos
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:01:17 TimeLimit=00:04:00 TimeMin=N/A
+   SubmitTime=2024-07-08T13:53:51 EligibleTime=2024-07-08T13:53:51
+   AccrueTime=2024-07-08T13:53:51
+   StartTime=2024-07-08T13:53:52 EndTime=2024-07-08T13:57:52 Deadline=N/A
+   PreemptEligibleTime=2024-07-08T13:53:52 PreemptTime=None
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2024-07-08T13:53:52 Scheduler=Main
+   Partition=med2 AllocNode:Sid=cpu-3-64:29963
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=cpu-3-50
+   BatchHost=cpu-3-50
+   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=1,mem=2000M,node=1,billing=1
+   AllocTRES=cpu=1,mem=2000M,node=1,billing=1
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryNode=2000M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/home/kslauck/projects/reprex/reprex.sh
+   WorkDir=/home/kslauck/projects/reprex
+   StdErr=/home/kslauck/projects/reprex/test_job.err
+   StdIn=/dev/null
+   StdOut=/home/kslauck/projects/reprex/test_job.out
+   Power=
+   
+
+JobID|MaxRSS|AveCPU
+14333546.batch|68116K|00:00:05
+
+############### Job 14333546 summary ###############
+Name                : reprex.sh
+User                : kslauck
+Account             : adamgrp
+Partition           : med2
+Nodes               : cpu-3-50
+Cores               : 1
+GPUs                : 0
+State               : COMPLETED
+ExitCode            : 0:0
+Submit              : 2024-07-08T13:53:51
+Start               : 2024-07-08T13:53:52
+End                 : 2024-07-08T13:55:09
+Reserved walltime   : 00:04:00
+Used walltime       : 00:01:17
+Used CPU time       : 00:00:05
+% User (Computation): 79.71%
+% System (I/O)      : 20.29%
+Mem reserved        : 2000M
+Max Mem used        : 66.52M (cpu-3-50)
+Max Disk Write      : 112.64K (cpu-3-50)
+Max Disk Read       : 118.66M (cpu-3-50)
