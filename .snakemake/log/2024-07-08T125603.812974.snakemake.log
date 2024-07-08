@@ -1,0 +1,48 @@
+Building DAG of jobs...
+SLURM run ID: d0d58ed7-8e93-414b-831c-0b7dfeacf6f8
+Using shell: /usr/bin/bash
+Provided remote nodes: 500
+Job stats:
+job       count
+------  -------
+all           1
+reprex        1
+total         2
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jul  8 12:56:03 2024]
+rule reprex:
+    input: input_file.txt
+    output: output_file.txt
+    jobid: 1
+    reason: Missing output files: output_file.txt; Code has changed since last execution
+    resources: mem_mb=1000, mem_mib=954, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, runtime=5, partition=med2
+
+
+    echo 'Running test rule'
+    sleep 30
+    echo "Partition: $SLURM_JOB_PARTITION" > output_file.txt
+    
+No SLURM account given, trying to guess.
+Guessed SLURM account: adamgrp
+Job 1 has been submitted with SLURM jobid 14332282 (log: /group/dkarpgrp/kslauck/reprex/.snakemake/slurm_logs/rule_reprex/14332282.log).
+Waiting at most 60 seconds for missing files.
+[Mon Jul  8 12:57:07 2024]
+Finished job 1.
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jul  8 12:57:07 2024]
+localrule all:
+    input: output_file.txt
+    jobid: 0
+    reason: Input files updated by another job: output_file.txt
+    resources: mem_mb=5000, mem_mib=4769, disk_mb=1000, disk_mib=954, tmpdir=/tmp, runtime=20, partition=med2
+
+[Mon Jul  8 12:57:07 2024]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2024-07-08T125603.812974.snakemake.log

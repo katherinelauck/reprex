@@ -1,0 +1,21 @@
+---
+snakefile: reprex
+executor: slurm
+latency-wait: 60
+show-failed-logs: True
+keep-going: True
+printshellcmds: True
+rerun-incomplete: True
+restart-times: 3
+jobname: "{rule}.{jobid}"
+max-status-checks-per-second: 1
+jobs: 500
+set-resources:
+  reprex:
+    mem_mb: 1000
+    runtime: "5m"
+    partition: "med2"
+default-resources:
+  - mem_mb=5000
+  - runtime="20m"
+  - partition="med2"  # Set your default partition here

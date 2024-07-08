@@ -1,0 +1,77 @@
+==========================================
+SLURM_JOB_ID = 14332191
+SLURM_NODELIST = cpu-10-66
+==========================================
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided remote nodes: 1
+Provided resources: mem_mb=1000, mem_mib=954, disk_mb=1000, disk_mib=954
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jul  8 12:47:37 2024]
+rule reprex:
+    input: input_file.txt
+    output: output_file.txt
+    jobid: 0
+    reason: Forced execution
+    resources: mem_mb=1000, mem_mib=954, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, runtime=5, partition=med2
+
+
+    echo 'Running test rule'
+    sleep 60
+    echo "Partition: $SLURM_JOB_PARTITION" > output_file.txt
+    
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Provided resources: mem_mb=1000, mem_mib=954, disk_mb=1000, disk_mib=954
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jul  8 12:47:38 2024]
+localrule reprex:
+    input: input_file.txt
+    output: output_file.txt
+    jobid: 0
+    reason: Forced execution
+    resources: mem_mb=1000, mem_mib=954, disk_mb=1000, disk_mib=954, tmpdir=/tmp, runtime=5, partition=med2
+
+
+    echo 'Running test rule'
+    sleep 60
+    echo "Partition: $SLURM_JOB_PARTITION" > output_file.txt
+    
+Running test rule
+[Mon Jul  8 12:48:38 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Storing output in storage.
+[Mon Jul  8 12:48:38 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Storing output in storage.
+
+############### Job 14332191 summary ###############
+Name                : 8dc73bfc-c125-439e-b117-89d1a012ec3d
+User                : kslauck
+Account             : adamgrp
+Partition           : med
+Nodes               : cpu-10-66
+Cores               : 2
+GPUs                : 0
+State               : COMPLETED
+ExitCode            : 0:0
+Submit              : 2024-07-08T12:47:34
+Start               : 2024-07-08T12:47:34
+End                 : 2024-07-08T12:48:38
+Reserved walltime   : 00:05:00
+Used walltime       : 00:01:04
+Used CPU time       : 00:00:01
+% User (Computation): 71.69%
+% System (I/O)      : 28.31%
+Mem reserved        : 1000M
+Max Mem used        : 40.78M (cpu-10-66)
+Max Disk Write      : 0.00  (cpu-10-66)
+Max Disk Read       : 10.61M (cpu-10-66)

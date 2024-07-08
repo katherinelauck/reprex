@@ -1,0 +1,21 @@
+configfile: "config.v8+.yaml"
+
+rule all:
+  input:
+    "output_file.txt",
+
+rule reprex:
+  input:
+    "input_file.txt"
+  output:
+    "output_file.txt"
+  resources:
+    mem_mb=config['set-resources']['reprex']['mem_mb'],
+    runtime=config['set-resources']['reprex']['runtime'],
+    partition=config['set-resources']['reprex']['partition'],
+  shell:
+    """
+    echo 'Running test rule'
+    sleep 30
+    echo "Partition: $SLURM_JOB_PARTITION" > output_file.txt
+    """

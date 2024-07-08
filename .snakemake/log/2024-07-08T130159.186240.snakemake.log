@@ -1,0 +1,32 @@
+Building DAG of jobs...
+Running Snakemake in a SLURM within a job may lead to unexpected behavior. Please run Snakemake directly on the head node.
+SLURM run ID: cc6a88d6-2126-42e2-af0c-fdeefbdea461
+Using shell: /usr/bin/bash
+Provided remote nodes: 500
+Job stats:
+job       count
+------  -------
+all           1
+reprex        1
+total         2
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jul  8 13:02:04 2024]
+rule reprex:
+    input: input_file.txt
+    output: output_file.txt
+    jobid: 1
+    reason: Missing output files: output_file.txt
+    resources: mem_mb=1000, mem_mib=954, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, runtime=5, partition=med2
+
+
+    echo 'Running test rule'
+    sleep 30
+    echo "Partition: $SLURM_JOB_PARTITION" > output_file.txt
+    
+No SLURM account given, trying to guess.
+Guessed SLURM account: adamgrp
+Job 1 has been submitted with SLURM jobid 14332349 (log: /group/dkarpgrp/kslauck/reprex/.snakemake/slurm_logs/rule_reprex/14332349.log).
+Waiting at most 60 seconds for missing files.
