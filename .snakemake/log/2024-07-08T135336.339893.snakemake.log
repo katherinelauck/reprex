@@ -1,0 +1,4 @@
+Building DAG of jobs...
+Running Snakemake in a SLURM within a job may lead to unexpected behavior. Please run Snakemake directly on the head node.
+SLURM run ID: a16f1df3-9021-4be9-9fc7-13bd2c7fce62
+Nothing to be done (all requested files are present and up to date).

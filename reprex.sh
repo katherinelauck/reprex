@@ -3,15 +3,15 @@
 #SBATCH --mem=2000
 #SBATCH --time=00:04:00
 #SBATCH --cpus-per-task=1
-#SBATCH -D /group/dkarpgrp/kslauck/reprex
+#SBATCH -D /home/kslauck/projects/reprex
 #SBATCH --output=test_job.out
 #SBATCH --error=test_job.err
 
 echo "Partition: $SLURM_JOB_PARTITION"
 
-snakemake --unlock --snakefile reprex
+conda run -n reprex snakemake --unlock --snakefile reprex
 
-snakemake --profile .
+conda run -n reprex snakemake --profile .
 
 # Print out values of the current jobs SLURM environment variables
 env | grep SLURM

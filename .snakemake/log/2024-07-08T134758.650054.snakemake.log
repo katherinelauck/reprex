@@ -1,6 +1,6 @@
 Building DAG of jobs...
 Running Snakemake in a SLURM within a job may lead to unexpected behavior. Please run Snakemake directly on the head node.
-SLURM run ID: cc6a88d6-2126-42e2-af0c-fdeefbdea461
+SLURM run ID: 2d1750c1-8b66-4ac2-a82c-b838fe853534
 Using shell: /usr/bin/bash
 Provided remote nodes: 500
 Job stats:
@@ -13,7 +13,7 @@ total         2
 Select jobs to execute...
 Execute 1 jobs...
 
-[Mon Jul  8 13:02:04 2024]
+[Mon Jul  8 13:48:04 2024]
 rule reprex:
     input: input_file.txt
     output: output_file.txt
@@ -28,22 +28,22 @@ rule reprex:
     
 No SLURM account given, trying to guess.
 Guessed SLURM account: adamgrp
-Job 1 has been submitted with SLURM jobid 14332349 (log: /group/dkarpgrp/kslauck/reprex/.snakemake/slurm_logs/rule_reprex/14332349.log).
+Job 1 has been submitted with SLURM jobid 14333429 (log: /group/dkarpgrp/kslauck/reprex/.snakemake/slurm_logs/rule_reprex/14333429.log).
 Waiting at most 60 seconds for missing files.
-[Mon Jul  8 13:03:09 2024]
+[Mon Jul  8 13:49:04 2024]
 Finished job 1.
 1 of 2 steps (50%) done
 Select jobs to execute...
 Execute 1 jobs...
 
-[Mon Jul  8 13:03:09 2024]
+[Mon Jul  8 13:49:04 2024]
 localrule all:
     input: output_file.txt
     jobid: 0
     reason: Input files updated by another job: output_file.txt
     resources: mem_mb=5000, mem_mib=4769, disk_mb=1000, disk_mib=954, tmpdir=/tmp, runtime=20, partition=med2
 
-[Mon Jul  8 13:03:09 2024]
+[Mon Jul  8 13:49:04 2024]
 Finished job 0.
 2 of 2 steps (100%) done
-Complete log: .snakemake/log/2024-07-08T130159.186240.snakemake.log
+Complete log: .snakemake/log/2024-07-08T134758.650054.snakemake.log
