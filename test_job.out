@@ -95,3 +95,49 @@ Mem reserved        : 2000M
 Max Mem used        : 66.52M (cpu-3-50)
 Max Disk Write      : 112.64K (cpu-3-50)
 Max Disk Read       : 118.66M (cpu-3-50)
+
+############### Job 14408873 summary ###############
+Name                : allocation
+User                : baumlerc
+Account             : ctbrowngrp
+Partition           : 
+Nodes               : cpu-6-94
+Cores               : 2
+GPUs                : 0
+State               : CANCELLED,FAILED
+ExitCode            : 0:53
+Submit              : 2024-07-10T19:42:09
+Start               : 2024-07-10T19:42:10
+End                 : 2024-07-10T19:42:11
+Reserved walltime   : 00:00:00
+Used walltime       : 00:00:01
+Used CPU time       : 00:00:00
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 0
+Max Mem used        : 16.00K (cpu-6-94)
+Max Disk Write      : 0.00  (cpu-6-94)
+Max Disk Read       : 10.24K (cpu-6-94)
+
+############### Job 14409233 summary ###############
+Name                : allocation
+User                : baumlerc
+Account             : ctbrowngrp
+Partition           : 
+Nodes               : cpu-6-94
+Cores               : 2
+GPUs                : 0
+State               : CANCELLED,FAILED
+ExitCode            : 0:53
+Submit              : 2024-07-10T20:12:56
+Start               : 2024-07-10T20:12:57
+End                 : 2024-07-10T20:12:57
+Reserved walltime   : 00:00:00
+Used walltime       : 00:00:00
+Used CPU time       : 00:00:00
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 0
+Max Mem used        : 8.00K (cpu-6-94)
+Max Disk Write      : 0.00  (cpu-6-94)
+Max Disk Read       : 10.24K (cpu-6-94)
